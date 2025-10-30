@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Community Disaster Management Design System
+All colors MUST be HSL for consistency and theming support.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    /* Card components */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    /* Popover components */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary brand - Deep blue for trust */
+    --primary: 215 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 215 85% 30%;
+
+    /* Secondary - Warm orange for community */
+    --secondary: 25 85% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 25 85% 55%;
+
+    /* Emergency/Alert - Red for urgent situations */
+    --emergency: 0 85% 55%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-hover: 0 85% 50%;
+
+    /* Success/Safe - Green for safety status */
+    --success: 140 85% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-hover: 140 85% 40%;
+
+    /* Warning - Yellow for caution */
+    --warning: 45 90% 55%;
+    --warning-foreground: 45 90% 15%;
+
+    /* Muted colors */
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent colors */
+    --accent: 215 20% 95%;
+    --accent-foreground: 215 25% 15%;
+
+    /* Destructive */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border and input */
+    --border: 215 20% 88%;
+    --input: 215 20% 92%;
+    --ring: 215 85% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 45%));
+    --gradient-emergency: linear-gradient(135deg, hsl(0 85% 55%), hsl(15 85% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(140 85% 45%), hsl(160 85% 50%));
+    --gradient-community: linear-gradient(135deg, hsl(25 85% 60%), hsl(35 85% 65%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(215 25% 15% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(215 25% 15% / 0.12);
+    --shadow-strong: 0 8px 24px hsl(215 25% 15% / 0.16);
+    --shadow-emergency: 0 4px 16px hsl(0 85% 55% / 0.2);
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
